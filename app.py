@@ -13,9 +13,12 @@ app.register_blueprint(livros_bp, url_prefix="/livros")
 def home():
     return {
         "status": "API rodando com sucesso",
-        "service": "livraria"},{
-        "message": "Va para /livros/ para acessar os livros ou /test para um teste simples"
-    }
+        "service": "livraria",
+        "endpoints": {
+            "livros": "/livros/",
+            "test": "/test"
+        }
+}, 200
 
 @app.route("/test")
 def test():
