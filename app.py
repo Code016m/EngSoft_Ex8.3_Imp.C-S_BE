@@ -14,7 +14,7 @@ def home():
     return {
         "status": "API rodando com sucesso",
         "service": "livraria",
-        "msg": "Vá para /livros/ para acessar os livros ou /test para um teste simples"
+        "message": "Vá para /livros/ para acessar os livros ou /test para um teste simples"
     }
 
 @app.route("/test")
