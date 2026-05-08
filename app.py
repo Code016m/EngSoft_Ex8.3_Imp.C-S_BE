@@ -9,6 +9,7 @@ CORS(app)
 
 app.register_blueprint(livros_bp, url_prefix="/livros")
 
+
 @app.route("/")
 def home():
     return {
@@ -18,14 +19,16 @@ def home():
             "livros": "/livros/",
             "test": "/test"
         }
-}, 200
+    }, 200
+
 
 @app.route("/test")
 def test():
     return {
         "message": "Teste OK",
         "status": 200
-    }
+    }, 200
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
