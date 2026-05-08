@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect
 from flask_cors import CORS
 
 from routes.livros import livros_bp
@@ -12,9 +12,9 @@ app.register_blueprint(
     url_prefix="/livros"
 )
 
-@app.route('/')
-def index():
-    return jsonify({"msg": "Bem-vindo à API de livros!"})
+@app.route("/")
+def home():
+    return redirect("/livros/")
 
 if __name__ == "__main__":
     app.run(debug=True)
