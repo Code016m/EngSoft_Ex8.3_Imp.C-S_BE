@@ -12,5 +12,9 @@ app.register_blueprint(
     url_prefix="/livros"
 )
 
+@app.route('/')
+def index():
+    return jsonify({"msg": "Bem-vindo à API de livros!"})
+
 if __name__ == "__main__":
     app.run(debug=True)
