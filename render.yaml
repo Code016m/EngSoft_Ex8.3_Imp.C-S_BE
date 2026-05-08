@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: engsoft-livraria-api
+    name: engsoft-api-livraria
     runtime: python
 
     buildCommand: pip install -r requirements.txt
