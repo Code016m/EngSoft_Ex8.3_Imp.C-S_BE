@@ -17,7 +17,7 @@ def home():
         "status": "API rodando com sucesso",
         "service": "livraria",
         "endpoints": {
-            "livros": "/livros/",
+            "livros": "/livros",
             "test": "/test"
         }
     }, 200
