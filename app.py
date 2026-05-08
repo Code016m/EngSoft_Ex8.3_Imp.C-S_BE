@@ -26,8 +26,9 @@ def home():
 @app.route("/test")
 def test():
     return {
-        "message": "Teste OK",
-        "status": 200
+        "titulo": "Exemplo de Livro",
+        "autor": "Autor Exemplo",
+        "preco": 29.99
     }, 200
 
 
